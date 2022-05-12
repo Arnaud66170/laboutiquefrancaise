@@ -26,6 +26,7 @@ class __TwigTemplate_a7aad407c7b2900529a928641a256d03 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'carousel' => [$this, 'block_carousel'],
             'content' => [$this, 'block_content'],
         ];
     }
@@ -75,6 +76,24 @@ class __TwigTemplate_a7aad407c7b2900529a928641a256d03 extends Template
     }
 
     // line 5
+    public function block_carousel($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "carousel"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "carousel"));
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 7
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,7 +103,7 @@ class __TwigTemplate_a7aad407c7b2900529a928641a256d03 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 6
+        // line 8
         echo "
   <!-- Marketing messaging and featurettes
   ================================================== -->
@@ -184,7 +203,7 @@ class __TwigTemplate_a7aad407c7b2900529a928641a256d03 extends Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  107 => 8,  97 => 7,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -192,6 +211,8 @@ class __TwigTemplate_a7aad407c7b2900529a928641a256d03 extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}La boutique Française{% endblock %}
+
+{% block carousel %}{% endblock %}
 
 {% block content %}
 

@@ -118,7 +118,11 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
 
     <main>
 
-        <div id=\"myCarousel\" class=\"carousel slide\" data-bs-ride=\"carousel\">
+    ";
+        // line 70
+        if (        $this->hasBlock("carousel", $context, $blocks)) {
+            // line 71
+            echo "        <div id=\"myCarousel\" class=\"carousel slide\" data-bs-ride=\"carousel\">
             <div class=\"carousel-indicators\">
             <button type=\"button\" data-bs-target=\"#myCarousel\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>
             <button type=\"button\" data-bs-target=\"#myCarousel\" data-bs-slide-to=\"1\" aria-label=\"Slide 2\"></button>
@@ -168,12 +172,15 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
             <span class=\"visually-hidden\">Next</span>
             </button>
         </div>
-
+    ";
+        }
+        // line 122
+        echo "    
         <div class=\"container marketing\">
             ";
-        // line 122
-        $this->displayBlock('content', $context, $blocks);
         // line 124
+        $this->displayBlock('content', $context, $blocks);
+        // line 126
         echo "        </div><!-- /.container -->
 
         <!-- FOOTER -->
@@ -258,7 +265,7 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
 
     }
 
-    // line 122
+    // line 124
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -268,7 +275,7 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 123
+        // line 125
         echo "            ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -283,9 +290,14 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  272 => 123,  262 => 122,  249 => 13,  239 => 12,  226 => 9,  216 => 8,  197 => 5,  177 => 124,  175 => 122,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
+        return array (  279 => 125,  269 => 124,  256 => 13,  246 => 12,  233 => 9,  223 => 8,  204 => 5,  184 => 126,  182 => 124,  178 => 122,  125 => 71,  123 => 70,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -359,6 +371,7 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
 
     <main>
 
+    {% if block('carousel') is defined %}
         <div id=\"myCarousel\" class=\"carousel slide\" data-bs-ride=\"carousel\">
             <div class=\"carousel-indicators\">
             <button type=\"button\" data-bs-target=\"#myCarousel\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>
@@ -409,7 +422,8 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
             <span class=\"visually-hidden\">Next</span>
             </button>
         </div>
-
+    {% endif %}
+    
         <div class=\"container marketing\">
             {% block content %}
             {% endblock %}

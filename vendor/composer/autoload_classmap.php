@@ -7,7 +7,10 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\HomeController' => $baseDir . '/src/Controller/HomeController.php',
+    'App\\Controller\\RegisterController' => $baseDir . '/src/Controller/RegisterController.php',
+    'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Repository\\UserRepository' => $baseDir . '/src/Repository/UserRepository.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Doctrine\\Bundle\\DoctrineBundle\\Attribute\\AsEntityListener' => $vendorDir . '/doctrine/doctrine-bundle/Attribute/AsEntityListener.php',

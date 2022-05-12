@@ -551,7 +551,10 @@ class ComposerStaticInitdea966a111e0c21f740df7da7c048216
 
     public static $classMap = array (
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
+        'App\\Controller\\RegisterController' => __DIR__ . '/../..' . '/src/Controller/RegisterController.php',
+        'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Attribute\\AsEntityListener' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Attribute/AsEntityListener.php',
