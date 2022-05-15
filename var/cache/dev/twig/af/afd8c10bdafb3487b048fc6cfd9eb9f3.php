@@ -437,6 +437,6 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
     </main>
     </body>
 </html>
-", "base.html.twig", "C:\\laragon\\www\\laboutiquefrancaise2\\templates\\base.html.twig");
+", "base.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\base.html.twig");
     }
 }

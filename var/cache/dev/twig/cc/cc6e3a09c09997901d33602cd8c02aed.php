@@ -131,6 +131,6 @@ class __TwigTemplate_26239ee0ff02eeaf120f4e63dbe621dc extends Template
 {{form(form)}}
 
 {% endblock %}
-", "register/index.html.twig", "C:\\laragon\\www\\laboutiquefrancaise2\\templates\\register\\index.html.twig");
+", "register/index.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\register\\index.html.twig");
     }
 }
