@@ -413,6 +413,6 @@ class __TwigTemplate_a72ec545c3d9a38cd35614a0be1e2d17 extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "C:\\laragon\\www\\laboutiquefrancaise2\\vendor\\symfony\\debug-bundle\\Resources\\views\\Profiler\\dump.html.twig");
     }
 }
