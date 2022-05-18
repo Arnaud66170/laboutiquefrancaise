@@ -91,27 +91,43 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
         <header>
         <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
             <div class=\"container-fluid\">
-            <a class=\"navbar-brand\" href=\"#\">La boutique Française</a>
-            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
-            <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
-                <ul class=\"navbar-nav me-auto mb-2 mb-md-0\">
-                <li class=\"nav-item\">
-                    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Link</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>
-                </li>
-                </ul>
-                <form class=\"d-flex\">
-                <input class=\"form-control me-2\" type=\"search\" placeholder=\"recherche\" aria-label=\"Search\">
-                <button class=\"btn btn-outline-success\" type=\"submit\">Rechercher</button>
-                </form>
-            </div>
+                <a class=\"navbar-brand\" href=\"#\">La boutique Française</a>
+                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                    <span class=\"navbar-toggler-icon\"></span>
+                </button>
+                <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
+                    <ul class=\"navbar-nav me-auto mb-2 mb-md-0\">
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Link</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>
+                        </li>
+                    </ul>
+                    ";
+        // line 59
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 59, $this->source); })()), "user", [], "any", false, false, false, 59)) {
+            // line 60
+            echo "                        <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_account");
+            echo "\">Mon compte</a> | <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Déconnexion</a> 
+                    ";
+        } else {
+            // line 62
+            echo "                        <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\">Connexion</a> | <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+            echo "\">Inscription</a> 
+                    ";
+        }
+        // line 64
+        echo "                </div>
             </div>
         </nav>
         </header>
@@ -119,9 +135,9 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
     <main>
 
     ";
-        // line 70
+        // line 71
         if (        $this->hasBlock("carousel", $context, $blocks)) {
-            // line 71
+            // line 72
             echo "        <div id=\"myCarousel\" class=\"carousel slide\" data-bs-ride=\"carousel\">
             <div class=\"carousel-indicators\">
             <button type=\"button\" data-bs-target=\"#myCarousel\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\" aria-label=\"Slide 1\"></button>
@@ -174,13 +190,13 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
         </div>
     ";
         }
-        // line 122
+        // line 123
         echo "    
         <div class=\"container marketing\">
             ";
-        // line 124
+        // line 125
         $this->displayBlock('content', $context, $blocks);
-        // line 126
+        // line 127
         echo "        </div><!-- /.container -->
 
         <!-- FOOTER -->
@@ -265,7 +281,7 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
 
     }
 
-    // line 124
+    // line 125
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -275,7 +291,7 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 125
+        // line 126
         echo "            ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -297,7 +313,7 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
 
     public function getDebugInfo()
     {
-        return array (  279 => 125,  269 => 124,  256 => 13,  246 => 12,  233 => 9,  223 => 8,  204 => 5,  184 => 126,  182 => 124,  178 => 122,  125 => 71,  123 => 70,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
+        return array (  295 => 126,  285 => 125,  272 => 13,  262 => 12,  249 => 9,  239 => 8,  220 => 5,  200 => 127,  198 => 125,  194 => 123,  141 => 72,  139 => 71,  130 => 64,  122 => 62,  114 => 60,  112 => 59,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -344,27 +360,28 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
         <header>
         <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
             <div class=\"container-fluid\">
-            <a class=\"navbar-brand\" href=\"#\">La boutique Française</a>
-            <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
-            <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
-                <ul class=\"navbar-nav me-auto mb-2 mb-md-0\">
-                <li class=\"nav-item\">
-                    <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"#\">Link</a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>
-                </li>
-                </ul>
-                <form class=\"d-flex\">
-                <input class=\"form-control me-2\" type=\"search\" placeholder=\"recherche\" aria-label=\"Search\">
-                <button class=\"btn btn-outline-success\" type=\"submit\">Rechercher</button>
-                </form>
-            </div>
+                <a class=\"navbar-brand\" href=\"#\">La boutique Française</a>
+                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                    <span class=\"navbar-toggler-icon\"></span>
+                </button>
+                <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
+                    <ul class=\"navbar-nav me-auto mb-2 mb-md-0\">
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\"#\">Link</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>
+                        </li>
+                    </ul>
+                    {% if app.user %}
+                        <a href=\"{{ path('app_account')}}\">Mon compte</a> | <a href=\"{{ path('app_logout')}}\">Déconnexion</a> 
+                    {% else %}
+                        <a href=\"{{ path('app_login')}}\">Connexion</a> | <a href=\"{{ path('app_register')}}\">Inscription</a> 
+                    {% endif %}
+                </div>
             </div>
         </nav>
         </header>
@@ -437,6 +454,6 @@ class __TwigTemplate_bea970c0069d766ae9cd721ddbfcf0c5 extends Template
     </main>
     </body>
 </html>
-", "base.html.twig", "C:\\laragon\\www\\laboutiquefrancaise2\\templates\\base.html.twig");
+", "base.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\base.html.twig");
     }
 }

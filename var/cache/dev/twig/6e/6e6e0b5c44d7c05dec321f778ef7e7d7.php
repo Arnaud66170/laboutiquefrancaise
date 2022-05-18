@@ -115,7 +115,7 @@ class __TwigTemplate_7a3ed287964361cdab215b9c03fb76c6 extends Template
         }
         // line 17
         echo "
-    <h1 class=\"h3 my-5 font-weight-normal\">Veuillez vous inscrire</h1>
+    <h1 class=\"h3 my-5 font-weight-normal\">Veuillez vous identifier</h1>
     <label for=\"inputEmail\">Votre email</label>
     <input type=\"email\" value=\"";
         // line 20
@@ -181,7 +181,7 @@ class __TwigTemplate_7a3ed287964361cdab215b9c03fb76c6 extends Template
         </div>
     {% endif %}
 
-    <h1 class=\"h3 my-5 font-weight-normal\">Veuillez vous inscrire</h1>
+    <h1 class=\"h3 my-5 font-weight-normal\">Veuillez vous identifier</h1>
     <label for=\"inputEmail\">Votre email</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder='Entrez votre email' autocomplete=\"email\" required autofocus>
     <label for=\"inputPassword\">Votre mot de passe</label>
@@ -207,6 +207,6 @@ class __TwigTemplate_7a3ed287964361cdab215b9c03fb76c6 extends Template
     </button>
 </form>
 {% endblock %}
-", "security/login.html.twig", "C:\\laragon\\www\\laboutiquefrancaise2\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\security\\login.html.twig");
     }
 }

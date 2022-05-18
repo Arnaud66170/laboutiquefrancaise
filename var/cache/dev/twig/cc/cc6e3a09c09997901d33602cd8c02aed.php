@@ -86,9 +86,9 @@ class __TwigTemplate_26239ee0ff02eeaf120f4e63dbe621dc extends Template
 
         // line 7
         echo "
-<h1>Inscription</h1>
+    <h1>Inscription</h1>
 
-";
+    ";
         // line 10
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), 'form');
         echo "
@@ -126,9 +126,9 @@ class __TwigTemplate_26239ee0ff02eeaf120f4e63dbe621dc extends Template
 
 {% block content %}
 
-<h1>Inscription</h1>
+    <h1>Inscription</h1>
 
-{{form(form)}}
+    {{form(form)}}
 
 {% endblock %}
 ", "register/index.html.twig", "C:\\laragon\\www\\laboutiquefrancaise2\\templates\\register\\index.html.twig");
