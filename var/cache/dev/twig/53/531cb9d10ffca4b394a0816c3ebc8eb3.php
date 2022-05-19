@@ -86,11 +86,9 @@ class __TwigTemplate_e9394f80d9d3d923a3f4658ed62ba9fb extends Template
 
         // line 6
         echo "    <h1>Modifier mon mot de passe</h1>
-    Bienvenue dans votres espace de modification de mot de passe, ";
-        // line 7
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 7, $this->source); })()), "user", [], "any", false, false, false, 7), "firstname", [], "any", false, false, false, 7), "html", null, true);
-        echo ".<br/> 
     ";
+        // line 8
+        echo "    ";
         // line 9
         echo "
     - <a href=\"";
@@ -124,7 +122,7 @@ class __TwigTemplate_e9394f80d9d3d923a3f4658ed62ba9fb extends Template
 
     public function getDebugInfo()
     {
-        return array (  103 => 12,  98 => 10,  95 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  101 => 12,  96 => 10,  93 => 9,  91 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -135,7 +133,7 @@ class __TwigTemplate_e9394f80d9d3d923a3f4658ed62ba9fb extends Template
 
 {% block content %}
     <h1>Modifier mon mot de passe</h1>
-    Bienvenue dans votres espace de modification de mot de passe, {{ app.user.firstname}}.<br/> 
+    {# Bienvenue dans votres espace de modification de mot de passe, {{ app.user.firstname}}.<br/>  #}
     {# {{dump(app.user)}} #}
 
     - <a href=\"{{ path('app_account')}}\">retourner à mon compte</a> <br/> 
