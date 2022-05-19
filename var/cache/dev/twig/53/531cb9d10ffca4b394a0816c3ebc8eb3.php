@@ -92,12 +92,16 @@ class __TwigTemplate_e9394f80d9d3d923a3f4658ed62ba9fb extends Template
         echo ".<br/> 
     ";
         // line 9
-        echo "    <hr>
+        echo "
     - <a href=\"";
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_account");
         echo "\">retourner à mon compte</a> <br/> 
-
+    <hr>
+";
+        // line 12
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form');
+        echo "
     <hr>
 ";
         
@@ -120,7 +124,7 @@ class __TwigTemplate_e9394f80d9d3d923a3f4658ed62ba9fb extends Template
 
     public function getDebugInfo()
     {
-        return array (  98 => 10,  95 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 12,  98 => 10,  95 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -133,14 +137,15 @@ class __TwigTemplate_e9394f80d9d3d923a3f4658ed62ba9fb extends Template
     <h1>Modifier mon mot de passe</h1>
     Bienvenue dans votres espace de modification de mot de passe, {{ app.user.firstname}}.<br/> 
     {# {{dump(app.user)}} #}
-    <hr>
-    - <a href=\"{{ path('app_account')}}\">retourner à mon compte</a> <br/> 
 
+    - <a href=\"{{ path('app_account')}}\">retourner à mon compte</a> <br/> 
+    <hr>
+{{form(form)}}
     <hr>
 {% endblock %}
 
 
 
-", "account/password.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\account\\password.html.twig");
+", "account/password.html.twig", "C:\\laragon\\www\\laboutiquefrancaise\\templates\\account\\password.html.twig");
     }
 }
