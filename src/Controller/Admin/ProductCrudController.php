@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller\Admin;
-
+// Gesion de l'affichage du panneau EasyAdmin
 use App\Entity\Product;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
@@ -26,7 +26,10 @@ class ProductCrudController extends AbstractCrudController
             SlugField::new('slug')-> setTargetFieldName('name'),
             AssociationField::new('category'),
             TextField::new('subtitle'),
-            ImageField::new('illustration')->setUploadDir('public/uploads'),
+            ImageField::new('illustration')
+                ->setBasePath('public/uploads')
+                ->setUploadDir('public/uploads')
+                ->setUploadedFileNamePattern('[randomhash].[extension]') ,
             TextareaField::new('description'),
             MoneyField::new('price')->setCurrency('EUR'),
         ];

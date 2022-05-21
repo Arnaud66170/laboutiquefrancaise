@@ -101,7 +101,10 @@ class __TwigTemplate_1f9d3e4550f53cd9584ac13b98be6054 extends Template
                 <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
                     <ul class=\"navbar-nav me-auto mb-2 mb-md-0\">
                         <li class=\"nav-item\">
-                            <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Nos produits</a>
+                            <a class=\"nav-link active\" aria-current=\"page\" href=\"";
+        // line 50
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_products");
+        echo "\">Nos produits</a>
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link \" aria-current=\"page\" href=\"#\">Qui sommes-nous ?</a>
@@ -131,7 +134,7 @@ class __TwigTemplate_1f9d3e4550f53cd9584ac13b98be6054 extends Template
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Connexion</a> | <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-            echo "\">Inscription</a> 
+            echo "\">Inscription</a>  
                         ";
         }
         // line 68
@@ -327,7 +330,7 @@ class __TwigTemplate_1f9d3e4550f53cd9584ac13b98be6054 extends Template
 
     public function getDebugInfo()
     {
-        return array (  309 => 131,  299 => 130,  286 => 13,  276 => 12,  263 => 9,  253 => 8,  234 => 5,  209 => 132,  207 => 130,  203 => 128,  150 => 77,  148 => 76,  138 => 68,  130 => 66,  120 => 64,  118 => 63,  114 => 61,  96 => 43,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
+        return array (  312 => 131,  302 => 130,  289 => 13,  279 => 12,  266 => 9,  256 => 8,  237 => 5,  212 => 132,  210 => 130,  206 => 128,  153 => 77,  151 => 76,  141 => 68,  133 => 66,  123 => 64,  121 => 63,  117 => 61,  106 => 50,  96 => 43,  66 => 15,  64 => 12,  61 => 11,  58 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -381,7 +384,7 @@ class __TwigTemplate_1f9d3e4550f53cd9584ac13b98be6054 extends Template
                 <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">
                     <ul class=\"navbar-nav me-auto mb-2 mb-md-0\">
                         <li class=\"nav-item\">
-                            <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Nos produits</a>
+                            <a class=\"nav-link active\" aria-current=\"page\" href=\"{{path('app_products')}}\">Nos produits</a>
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link \" aria-current=\"page\" href=\"#\">Qui sommes-nous ?</a>
@@ -397,7 +400,7 @@ class __TwigTemplate_1f9d3e4550f53cd9584ac13b98be6054 extends Template
                         {% if app.user %}
                             <a href=\"{{ path('app_account')}}\">Mon compte <small>({{app.user.firstname}})</small></a> | <a href=\"{{ path('app_logout')}}\">Déconnexion</a> 
                             {% else %}
-                                <a href=\"{{ path('app_login')}}\">Connexion</a> | <a href=\"{{ path('app_register')}}\">Inscription</a> 
+                                <a href=\"{{ path('app_login')}}\">Connexion</a> | <a href=\"{{ path('app_register')}}\">Inscription</a>  
                         {% endif %}
                     </div>
                 </div>
