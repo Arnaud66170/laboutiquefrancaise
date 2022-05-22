@@ -1,13 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 @import '../css/carousel.scss';
 
+body {
+    position: relative;
+}
 .navbar-item-custom, .navbar-item-custom a  { 
     color:#fff;
 }
 
 .footer-custom { 
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0px;
     width: 100%;
     background-color: #dfeaff;
@@ -36,4 +39,8 @@
 
 .product-container{
     margin-bottom: 150px;
+}
+
+.product-page-price{
+    font-size: 19px;
 }
