@@ -32,7 +32,7 @@ class ProductController extends AbstractController
 
         $form->handleRequest($request);
 
-        if ($form->isValid() && $form->isSubmitted()){
+        if ($form->isSubmitted() && $form->isValid()){
             $products =  $this->entityManager->getRepository(Product::class)->findWithSearch($search);
             // $search = $form->getData();
             // dd($search);
