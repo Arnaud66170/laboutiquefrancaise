@@ -11,7 +11,7 @@ body {
 .footer-custom { 
     text-align: center;
     position: absolute;
-    bottom: 0px;
+    // bottom: 0px;
     width: 100%;
     background-color: #dfeaff;
     padding-top: 25px;
@@ -20,7 +20,7 @@ body {
 .product-item h5{
     text-transform: uppercase;
     font-size: 15 px;
-    margin-bottom: 1px;
+    margin-bottom: 50px;
 }
 
 .product-item {
@@ -44,3 +44,4 @@ body {
 .product-page-price{
     font-size: 19px;
 }
+
