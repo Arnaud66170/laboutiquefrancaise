@@ -20,7 +20,7 @@ class CartController extends AbstractController
     public function add(Cart $cart, $id): Response
     {
         $cart->add($id);
-        return $this->redirectToRoute('cart/index.html.twig');
+        return $this->redirectToRoute('app_cart');
     }
 
     #[Route('/cart/remove', name: 'app_remove_my_cart')]

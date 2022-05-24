@@ -119,7 +119,10 @@ class __TwigTemplate_d4be5e315f16f925f1bcfc20a3f95a12 extends Template
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 19, $this->source); })()), "description", [], "any", false, false, false, 19), "html", null, true);
         echo " 
             </p> 
-            <a href=\"\" class=\"btn btn-primary\">Ajouter au panier</a>
+            <a href=\" ";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_add_to_cart", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 21, $this->source); })()), "id", [], "any", false, false, false, 21)]), "html", null, true);
+        echo " \" class=\"btn btn-primary\">Ajouter au panier</a>
         </div>
     </div>
 
@@ -144,7 +147,7 @@ class __TwigTemplate_d4be5e315f16f925f1bcfc20a3f95a12 extends Template
 
     public function getDebugInfo()
     {
-        return array (  119 => 19,  112 => 15,  107 => 13,  102 => 12,  95 => 9,  90 => 6,  80 => 5,  59 => 3,  36 => 1,);
+        return array (  124 => 21,  119 => 19,  112 => 15,  107 => 13,  102 => 12,  95 => 9,  90 => 6,  80 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -169,7 +172,7 @@ class __TwigTemplate_d4be5e315f16f925f1bcfc20a3f95a12 extends Template
             <p> 
                 {{product.description}} 
             </p> 
-            <a href=\"\" class=\"btn btn-primary\">Ajouter au panier</a>
+            <a href=\" {{ path ('app_add_to_cart',{'id': product.id}) }} \" class=\"btn btn-primary\">Ajouter au panier</a>
         </div>
     </div>
 
