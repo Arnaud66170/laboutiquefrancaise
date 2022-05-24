@@ -27,6 +27,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         $this->parent = false;
 
         $this->blocks = [
+            'head_favicon' => [$this, 'block_head_favicon'],
             'head_stylesheets' => [$this, 'block_head_stylesheets'],
             'head_javascript' => [$this, 'block_head_javascript'],
             'body_id' => [$this, 'block_body_id'],
@@ -45,7 +46,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@EasyAdmin/page/login_minimal.html.twig"));
 
         // line 3
-        $context["__internal_e00f6d08a502ab29f13f8f50c5a61490d058fe6404fdcc7de602df7351e6e105"] = (($context["translation_domain"]) ?? ("messages"));
+        $context["__internal_9e9046d73ffacdb4edfe7fb96e114589de69f61e447fe54645e67b1986ea1ebf"] = (($context["translation_domain"]) ?? ("messages"));
         // line 4
         echo "<!DOCTYPE html>
 <html>
@@ -56,32 +57,37 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">
         <meta name=\"generator\" content=\"EasyAdmin\" />
 
-        <title>";
+        ";
         // line 13
+        $this->displayBlock('head_favicon', $context, $blocks);
+        // line 14
+        echo "
+        <title>";
+        // line 15
         echo twig_striptags(        $this->renderBlock("page_title", $context, $blocks));
         echo "</title>
 
         ";
-        // line 15
+        // line 17
         $this->displayBlock('head_stylesheets', $context, $blocks);
-        // line 18
+        // line 20
         echo "
         ";
-        // line 19
+        // line 21
         $this->displayBlock('head_javascript', $context, $blocks);
-        // line 22
+        // line 24
         echo "    </head>
 
     <body id=\"";
-        // line 24
+        // line 26
         $this->displayBlock('body_id', $context, $blocks);
         echo "\" class=\"ea ";
         $this->displayBlock('body_class', $context, $blocks);
         echo "\">
         ";
-        // line 25
+        // line 27
         $this->displayBlock('wrapper_wrapper', $context, $blocks);
-        // line 26
+        // line 28
         echo "    </body>
 </html>
 
@@ -94,7 +100,25 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     }
 
-    // line 15
+    // line 13
+    public function block_head_favicon($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_favicon"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_favicon"));
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 17
     public function block_head_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -104,7 +128,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_stylesheets"));
 
-        // line 16
+        // line 18
         echo "            <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/easyadmin/app.css"), "html", null, true);
         echo "\">
@@ -117,7 +141,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     }
 
-    // line 19
+    // line 21
     public function block_head_javascript($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -127,7 +151,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_javascript"));
 
-        // line 20
+        // line 22
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/easyadmin/app.js"), "html", null, true);
         echo "\"></script>
@@ -140,7 +164,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     }
 
-    // line 24
+    // line 26
     public function block_body_id($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -175,7 +199,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     }
 
-    // line 25
+    // line 27
     public function block_wrapper_wrapper($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -205,7 +229,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  179 => 25,  144 => 24,  131 => 20,  121 => 19,  108 => 16,  98 => 15,  85 => 26,  83 => 25,  77 => 24,  73 => 22,  71 => 19,  68 => 18,  66 => 15,  61 => 13,  50 => 4,  48 => 3,);
+        return array (  203 => 27,  168 => 26,  155 => 22,  145 => 21,  132 => 18,  122 => 17,  104 => 13,  91 => 28,  89 => 27,  83 => 26,  79 => 24,  77 => 21,  74 => 20,  72 => 17,  67 => 15,  64 => 14,  62 => 13,  51 => 4,  49 => 3,);
     }
 
     public function getSourceContext()
@@ -221,6 +245,8 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         <meta name=\"robots\" content=\"noindex, nofollow, noarchive, nosnippet, noodp, noimageindex, notranslate, nocache\" />
         <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">
         <meta name=\"generator\" content=\"EasyAdmin\" />
+
+        {% block head_favicon %}{% endblock %}
 
         <title>{{ block('page_title')|striptags|raw }}</title>
 

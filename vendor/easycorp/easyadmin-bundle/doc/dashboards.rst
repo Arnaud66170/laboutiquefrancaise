@@ -51,7 +51,10 @@ Dashboard Route
 Each dashboard uses a single Symfony route to serve all its URLs. The needed
 information is passed using query string parameters. If you generated the
 dashboard with the ``make:admin:dashboard`` command, the route is defined using
-`Symfony route annotations`_ or PHP attributes (if the project requires PHP 8 or newer):
+`Symfony route annotations`_ or PHP attributes (if the project requires PHP 8 or newer).
+
+**The only requirement** is to define the route in a controller method named
+``index()``, which is the one called by EasyAdmin to render the dashboard:
 
 .. configuration-block::
 
@@ -98,6 +101,12 @@ dashboard with the ``make:admin:dashboard`` command, the route is defined using
 
             // ...
         }
+
+.. note::
+
+    Since ``index()`` is part of the Dashboard interface, you cannot add arguments
+    to it to inject dependencies. Instead, inject those dependencies in the
+    constructor method of the controller.
 
 The ``/admin`` URL is only a default value, so you can change it. If you do that,
 don't forget to also update this value in your Symfony security config to
@@ -843,6 +852,11 @@ applications can rely on its default values:
                 // rendering it from an EasyAdmin Dashboard this is automatically set to
                 // the same domain as the rest of the Dashboard)
                 'translation_domain' => 'admin',
+
+                // the full path of the favicon to use in the login page;
+                // the given value is passed "as is" to the "href" attribute of
+                // the "<link rel="shortcut icon">" tag used to render the icon
+                'favicon_path' => '/favicon-admin.svg',
 
                 // the title visible above the login form (define this option only if you are
                 // rendering the login template in a regular Symfony controller; when rendering

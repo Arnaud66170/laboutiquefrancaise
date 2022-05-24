@@ -27,6 +27,7 @@ class __TwigTemplate_8bc1a64e55b1db50cf9c2f94e0c25196 extends Template
         $this->blocks = [
             'body_class' => [$this, 'block_body_class'],
             'page_title' => [$this, 'block_page_title'],
+            'head_favicon' => [$this, 'block_head_favicon'],
             'wrapper_wrapper' => [$this, 'block_wrapper_wrapper'],
             'header_logo' => [$this, 'block_header_logo'],
         ];
@@ -48,7 +49,7 @@ class __TwigTemplate_8bc1a64e55b1db50cf9c2f94e0c25196 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@EasyAdmin/page/login.html.twig"));
 
         // line 6
-        $context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"] = ((array_key_exists("ea", $context)) ? (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 6, $this->source); })()), "i18n", [], "any", false, false, false, 6), "translationDomain", [], "any", false, false, false, 6)) : (((array_key_exists("translation_domain", $context)) ? ((($context["translation_domain"]) ?? ("messages"))) : (""))));
+        $context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"] = ((array_key_exists("ea", $context)) ? (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 6, $this->source); })()), "i18n", [], "any", false, false, false, 6), "translationDomain", [], "any", false, false, false, 6)) : (((array_key_exists("translation_domain", $context)) ? ((($context["translation_domain"]) ?? ("messages"))) : (""))));
         // line 5
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
         
@@ -98,6 +99,39 @@ class __TwigTemplate_8bc1a64e55b1db50cf9c2f94e0c25196 extends Template
     }
 
     // line 11
+    public function block_head_favicon($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_favicon"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_favicon"));
+
+        // line 12
+        echo "    ";
+        if (((array_key_exists("favicon_path", $context)) ? (_twig_default_filter((isset($context["favicon_path"]) || array_key_exists("favicon_path", $context) ? $context["favicon_path"] : (function () { throw new RuntimeError('Variable "favicon_path" does not exist.', 12, $this->source); })()), false)) : (false))) {
+            // line 13
+            echo "        <link rel=\"shortcut icon\" href=\"";
+            echo twig_escape_filter($this->env, (isset($context["favicon_path"]) || array_key_exists("favicon_path", $context) ? $context["favicon_path"] : (function () { throw new RuntimeError('Variable "favicon_path" does not exist.', 13, $this->source); })()), "html", null, true);
+            echo "\">
+    ";
+        } else {
+            // line 15
+            echo "        ";
+            $this->displayParentBlock("head_favicon", $context, $blocks);
+            echo "
+    ";
+        }
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 19
     public function block_wrapper_wrapper($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -107,161 +141,161 @@ class __TwigTemplate_8bc1a64e55b1db50cf9c2f94e0c25196 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "wrapper_wrapper"));
 
-        // line 12
+        // line 20
         echo "    ";
         $context["page_title"] =         $this->renderBlock("page_title", $context, $blocks);
-        // line 13
+        // line 21
         echo "    ";
-        $context["_username_label"] = ((array_key_exists("username_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["username_label"]) || array_key_exists("username_label", $context) ? $context["username_label"] : (function () { throw new RuntimeError('Variable "username_label" does not exist.', 13, $this->source); })()), [],         // line 6
-(isset($context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"]) || array_key_exists("__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418", $context) ? $context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"] : (function () { throw new RuntimeError('Variable "__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.username", [], "EasyAdminBundle")));
-        // line 14
+        $context["_username_label"] = ((array_key_exists("username_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["username_label"]) || array_key_exists("username_label", $context) ? $context["username_label"] : (function () { throw new RuntimeError('Variable "username_label" does not exist.', 21, $this->source); })()), [],         // line 6
+(isset($context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"]) || array_key_exists("__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1", $context) ? $context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"] : (function () { throw new RuntimeError('Variable "__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.username", [], "EasyAdminBundle")));
+        // line 22
         echo "    ";
-        $context["_password_label"] = ((array_key_exists("password_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["password_label"]) || array_key_exists("password_label", $context) ? $context["password_label"] : (function () { throw new RuntimeError('Variable "password_label" does not exist.', 14, $this->source); })()), [],         // line 6
-(isset($context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"]) || array_key_exists("__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418", $context) ? $context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"] : (function () { throw new RuntimeError('Variable "__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.password", [], "EasyAdminBundle")));
-        // line 15
+        $context["_password_label"] = ((array_key_exists("password_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["password_label"]) || array_key_exists("password_label", $context) ? $context["password_label"] : (function () { throw new RuntimeError('Variable "password_label" does not exist.', 22, $this->source); })()), [],         // line 6
+(isset($context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"]) || array_key_exists("__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1", $context) ? $context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"] : (function () { throw new RuntimeError('Variable "__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.password", [], "EasyAdminBundle")));
+        // line 23
         echo "    ";
-        $context["_forgot_password_label"] = ((array_key_exists("forgot_password_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["forgot_password_label"]) || array_key_exists("forgot_password_label", $context) ? $context["forgot_password_label"] : (function () { throw new RuntimeError('Variable "forgot_password_label" does not exist.', 15, $this->source); })()), [],         // line 6
-(isset($context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"]) || array_key_exists("__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418", $context) ? $context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"] : (function () { throw new RuntimeError('Variable "__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.forgot_password", [], "EasyAdminBundle")));
-        // line 16
+        $context["_forgot_password_label"] = ((array_key_exists("forgot_password_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["forgot_password_label"]) || array_key_exists("forgot_password_label", $context) ? $context["forgot_password_label"] : (function () { throw new RuntimeError('Variable "forgot_password_label" does not exist.', 23, $this->source); })()), [],         // line 6
+(isset($context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"]) || array_key_exists("__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1", $context) ? $context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"] : (function () { throw new RuntimeError('Variable "__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.forgot_password", [], "EasyAdminBundle")));
+        // line 24
         echo "    ";
-        $context["_remember_me_label"] = ((array_key_exists("remember_me_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["remember_me_label"]) || array_key_exists("remember_me_label", $context) ? $context["remember_me_label"] : (function () { throw new RuntimeError('Variable "remember_me_label" does not exist.', 16, $this->source); })()), [],         // line 6
-(isset($context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"]) || array_key_exists("__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418", $context) ? $context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"] : (function () { throw new RuntimeError('Variable "__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.remember_me", [], "EasyAdminBundle")));
-        // line 17
+        $context["_remember_me_label"] = ((array_key_exists("remember_me_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["remember_me_label"]) || array_key_exists("remember_me_label", $context) ? $context["remember_me_label"] : (function () { throw new RuntimeError('Variable "remember_me_label" does not exist.', 24, $this->source); })()), [],         // line 6
+(isset($context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"]) || array_key_exists("__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1", $context) ? $context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"] : (function () { throw new RuntimeError('Variable "__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.remember_me", [], "EasyAdminBundle")));
+        // line 25
         echo "    ";
-        $context["_sign_in_label"] = ((array_key_exists("sign_in_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["sign_in_label"]) || array_key_exists("sign_in_label", $context) ? $context["sign_in_label"] : (function () { throw new RuntimeError('Variable "sign_in_label" does not exist.', 17, $this->source); })()), [],         // line 6
-(isset($context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"]) || array_key_exists("__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418", $context) ? $context["__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418"] : (function () { throw new RuntimeError('Variable "__internal_c345aad7ed7017f4c74cfd672704d4a78504ba930e3b2efb2741c0d84f8d2418" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.sign_in", [], "EasyAdminBundle")));
-        // line 18
+        $context["_sign_in_label"] = ((array_key_exists("sign_in_label", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["sign_in_label"]) || array_key_exists("sign_in_label", $context) ? $context["sign_in_label"] : (function () { throw new RuntimeError('Variable "sign_in_label" does not exist.', 25, $this->source); })()), [],         // line 6
+(isset($context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"]) || array_key_exists("__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1", $context) ? $context["__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1"] : (function () { throw new RuntimeError('Variable "__internal_d39cfd862e098f7f567e95c9d382663fd487ba87aea2aad84cf3d90bb34fb8d1" does not exist.', 6, $this->source); })()))) : ($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("login_page.sign_in", [], "EasyAdminBundle")));
+        // line 26
         echo "
     ";
-        // line 19
-        $this->loadTemplate("@EasyAdmin/flash_messages.html.twig", "@EasyAdmin/page/login.html.twig", 19)->display($context);
-        // line 20
+        // line 27
+        $this->loadTemplate("@EasyAdmin/flash_messages.html.twig", "@EasyAdmin/page/login.html.twig", 27)->display($context);
+        // line 28
         echo "
     <div class=\"login-wrapper\">
         <header class=\"main-header\">
             <div id=\"header-logo\">
                 ";
-        // line 24
+        // line 32
         $this->displayBlock('header_logo', $context, $blocks);
-        // line 37
+        // line 45
         echo "            </div>
         </header>
 
         <section class=\"content\">
 
             ";
-        // line 42
-        if (((array_key_exists("error", $context)) ? (_twig_default_filter((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 42, $this->source); })()), false)) : (false))) {
-            // line 43
+        // line 50
+        if (((array_key_exists("error", $context)) ? (_twig_default_filter((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 50, $this->source); })()), false)) : (false))) {
+            // line 51
             echo "                <div class=\"w-100 alert alert-danger rounded mb-3\">
                     <i class=\"fas fa-times-circle mr-1\"></i>
                     ";
-            // line 45
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 45, $this->source); })()), "messageKey", [], "any", false, false, false, 45), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 45, $this->source); })()), "messageData", [], "any", false, false, false, 45), "security"), "html", null, true);
+            // line 53
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 53, $this->source); })()), "messageKey", [], "any", false, false, false, 53), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 53, $this->source); })()), "messageData", [], "any", false, false, false, 53), "security"), "html", null, true);
             echo "
                 </div>
             ";
         }
-        // line 48
+        // line 56
         echo "
             <form method=\"post\" action=\"";
-        // line 49
-        echo twig_escape_filter($this->env, ((array_key_exists("action", $context)) ? (_twig_default_filter((isset($context["action"]) || array_key_exists("action", $context) ? $context["action"] : (function () { throw new RuntimeError('Variable "action" does not exist.', 49, $this->source); })()), "")) : ("")), "html", null, true);
+        // line 57
+        echo twig_escape_filter($this->env, ((array_key_exists("action", $context)) ? (_twig_default_filter((isset($context["action"]) || array_key_exists("action", $context) ? $context["action"] : (function () { throw new RuntimeError('Variable "action" does not exist.', 57, $this->source); })()), "")) : ("")), "html", null, true);
         echo "\">
                 ";
-        // line 50
-        if (((array_key_exists("csrf_token_intention", $context)) ? (_twig_default_filter((isset($context["csrf_token_intention"]) || array_key_exists("csrf_token_intention", $context) ? $context["csrf_token_intention"] : (function () { throw new RuntimeError('Variable "csrf_token_intention" does not exist.', 50, $this->source); })()), false)) : (false))) {
-            // line 51
+        // line 58
+        if (((array_key_exists("csrf_token_intention", $context)) ? (_twig_default_filter((isset($context["csrf_token_intention"]) || array_key_exists("csrf_token_intention", $context) ? $context["csrf_token_intention"] : (function () { throw new RuntimeError('Variable "csrf_token_intention" does not exist.', 58, $this->source); })()), false)) : (false))) {
+            // line 59
             echo "                    <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken((isset($context["csrf_token_intention"]) || array_key_exists("csrf_token_intention", $context) ? $context["csrf_token_intention"] : (function () { throw new RuntimeError('Variable "csrf_token_intention" does not exist.', 51, $this->source); })())), "html", null, true);
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken((isset($context["csrf_token_intention"]) || array_key_exists("csrf_token_intention", $context) ? $context["csrf_token_intention"] : (function () { throw new RuntimeError('Variable "csrf_token_intention" does not exist.', 59, $this->source); })())), "html", null, true);
             echo "\">
                 ";
         }
-        // line 53
+        // line 61
         echo "
                 <input type=\"hidden\" name=\"";
-        // line 54
-        echo twig_escape_filter($this->env, ((array_key_exists("target_path_parameter", $context)) ? (_twig_default_filter((isset($context["target_path_parameter"]) || array_key_exists("target_path_parameter", $context) ? $context["target_path_parameter"] : (function () { throw new RuntimeError('Variable "target_path_parameter" does not exist.', 54, $this->source); })()), "_target_path")) : ("_target_path")), "html", null, true);
+        // line 62
+        echo twig_escape_filter($this->env, ((array_key_exists("target_path_parameter", $context)) ? (_twig_default_filter((isset($context["target_path_parameter"]) || array_key_exists("target_path_parameter", $context) ? $context["target_path_parameter"] : (function () { throw new RuntimeError('Variable "target_path_parameter" does not exist.', 62, $this->source); })()), "_target_path")) : ("_target_path")), "html", null, true);
         echo "\" value=\"";
-        echo twig_escape_filter($this->env, ((array_key_exists("target_path", $context)) ? (_twig_default_filter((isset($context["target_path"]) || array_key_exists("target_path", $context) ? $context["target_path"] : (function () { throw new RuntimeError('Variable "target_path" does not exist.', 54, $this->source); })()), ((array_key_exists("ea", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 54, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 54))) : ("/")))) : (((array_key_exists("ea", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 54, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 54))) : ("/")))), "html", null, true);
+        echo twig_escape_filter($this->env, ((array_key_exists("target_path", $context)) ? (_twig_default_filter((isset($context["target_path"]) || array_key_exists("target_path", $context) ? $context["target_path"] : (function () { throw new RuntimeError('Variable "target_path" does not exist.', 62, $this->source); })()), ((array_key_exists("ea", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 62, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 62))) : ("/")))) : (((array_key_exists("ea", $context)) ? ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 62, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 62))) : ("/")))), "html", null, true);
         echo "\" />
 
                 <div class=\"form-group\">
                     <label class=\"form-control-label required\" for=\"username\">";
-        // line 57
-        echo twig_escape_filter($this->env, (isset($context["_username_label"]) || array_key_exists("_username_label", $context) ? $context["_username_label"] : (function () { throw new RuntimeError('Variable "_username_label" does not exist.', 57, $this->source); })()), "html", null, true);
+        // line 65
+        echo twig_escape_filter($this->env, (isset($context["_username_label"]) || array_key_exists("_username_label", $context) ? $context["_username_label"] : (function () { throw new RuntimeError('Variable "_username_label" does not exist.', 65, $this->source); })()), "html", null, true);
         echo "</label>
                     <div class=\"form-widget\">
                         <input type=\"text\" id=\"username\" name=\"";
-        // line 59
-        echo twig_escape_filter($this->env, ((array_key_exists("username_parameter", $context)) ? (_twig_default_filter((isset($context["username_parameter"]) || array_key_exists("username_parameter", $context) ? $context["username_parameter"] : (function () { throw new RuntimeError('Variable "username_parameter" does not exist.', 59, $this->source); })()), "_username")) : ("_username")), "html", null, true);
+        // line 67
+        echo twig_escape_filter($this->env, ((array_key_exists("username_parameter", $context)) ? (_twig_default_filter((isset($context["username_parameter"]) || array_key_exists("username_parameter", $context) ? $context["username_parameter"] : (function () { throw new RuntimeError('Variable "username_parameter" does not exist.', 67, $this->source); })()), "_username")) : ("_username")), "html", null, true);
         echo "\" class=\"form-control\" value=\"";
-        echo twig_escape_filter($this->env, ((array_key_exists("last_username", $context)) ? (_twig_default_filter((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 59, $this->source); })()), "")) : ("")), "html", null, true);
+        echo twig_escape_filter($this->env, ((array_key_exists("last_username", $context)) ? (_twig_default_filter((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 67, $this->source); })()), "")) : ("")), "html", null, true);
         echo "\" required autofocus autocomplete=\"username\">
                     </div>
                 </div>
 
                 <div class=\"form-group\">
                     <label class=\"form-control-label required\" for=\"password\">";
-        // line 64
-        echo twig_escape_filter($this->env, (isset($context["_password_label"]) || array_key_exists("_password_label", $context) ? $context["_password_label"] : (function () { throw new RuntimeError('Variable "_password_label" does not exist.', 64, $this->source); })()), "html", null, true);
+        // line 72
+        echo twig_escape_filter($this->env, (isset($context["_password_label"]) || array_key_exists("_password_label", $context) ? $context["_password_label"] : (function () { throw new RuntimeError('Variable "_password_label" does not exist.', 72, $this->source); })()), "html", null, true);
         echo "</label>
                     <div class=\"form-widget\">
                         <input type=\"password\" id=\"password\" name=\"";
-        // line 66
-        echo twig_escape_filter($this->env, ((array_key_exists("password_parameter", $context)) ? (_twig_default_filter((isset($context["password_parameter"]) || array_key_exists("password_parameter", $context) ? $context["password_parameter"] : (function () { throw new RuntimeError('Variable "password_parameter" does not exist.', 66, $this->source); })()), "_password")) : ("_password")), "html", null, true);
+        // line 74
+        echo twig_escape_filter($this->env, ((array_key_exists("password_parameter", $context)) ? (_twig_default_filter((isset($context["password_parameter"]) || array_key_exists("password_parameter", $context) ? $context["password_parameter"] : (function () { throw new RuntimeError('Variable "password_parameter" does not exist.', 74, $this->source); })()), "_password")) : ("_password")), "html", null, true);
         echo "\" class=\"form-control\" required autocomplete=\"current-password\">
                     </div>
 
                     ";
-        // line 69
-        if (((array_key_exists("forgot_password_enabled", $context)) ? (_twig_default_filter((isset($context["forgot_password_enabled"]) || array_key_exists("forgot_password_enabled", $context) ? $context["forgot_password_enabled"] : (function () { throw new RuntimeError('Variable "forgot_password_enabled" does not exist.', 69, $this->source); })()), false)) : (false))) {
-            // line 70
+        // line 77
+        if (((array_key_exists("forgot_password_enabled", $context)) ? (_twig_default_filter((isset($context["forgot_password_enabled"]) || array_key_exists("forgot_password_enabled", $context) ? $context["forgot_password_enabled"] : (function () { throw new RuntimeError('Variable "forgot_password_enabled" does not exist.', 77, $this->source); })()), false)) : (false))) {
+            // line 78
             echo "                        <div class=\"form-text\">
                             <a href=\"";
-            // line 71
-            echo twig_escape_filter($this->env, ((array_key_exists("forgot_password_path", $context)) ? (_twig_default_filter((isset($context["forgot_password_path"]) || array_key_exists("forgot_password_path", $context) ? $context["forgot_password_path"] : (function () { throw new RuntimeError('Variable "forgot_password_path" does not exist.', 71, $this->source); })()), "#")) : ("#")), "html", null, true);
+            // line 79
+            echo twig_escape_filter($this->env, ((array_key_exists("forgot_password_path", $context)) ? (_twig_default_filter((isset($context["forgot_password_path"]) || array_key_exists("forgot_password_path", $context) ? $context["forgot_password_path"] : (function () { throw new RuntimeError('Variable "forgot_password_path" does not exist.', 79, $this->source); })()), "#")) : ("#")), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, (isset($context["_forgot_password_label"]) || array_key_exists("_forgot_password_label", $context) ? $context["_forgot_password_label"] : (function () { throw new RuntimeError('Variable "_forgot_password_label" does not exist.', 71, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["_forgot_password_label"]) || array_key_exists("_forgot_password_label", $context) ? $context["_forgot_password_label"] : (function () { throw new RuntimeError('Variable "_forgot_password_label" does not exist.', 79, $this->source); })()), "html", null, true);
             echo "</a>
                         </div>
                     ";
         }
-        // line 74
+        // line 82
         echo "                </div>
 
                 ";
-        // line 76
-        if (((array_key_exists("remember_me_enabled", $context)) ? (_twig_default_filter((isset($context["remember_me_enabled"]) || array_key_exists("remember_me_enabled", $context) ? $context["remember_me_enabled"] : (function () { throw new RuntimeError('Variable "remember_me_enabled" does not exist.', 76, $this->source); })()), false)) : (false))) {
-            // line 77
+        // line 84
+        if (((array_key_exists("remember_me_enabled", $context)) ? (_twig_default_filter((isset($context["remember_me_enabled"]) || array_key_exists("remember_me_enabled", $context) ? $context["remember_me_enabled"] : (function () { throw new RuntimeError('Variable "remember_me_enabled" does not exist.', 84, $this->source); })()), false)) : (false))) {
+            // line 85
             echo "                    <div class=\"form-group\">
                         <input class=\"form-check-input\" type=\"checkbox\" id=\"remember_me\" name=\"";
-            // line 78
-            echo twig_escape_filter($this->env, ((array_key_exists("remember_me_parameter", $context)) ? (_twig_default_filter((isset($context["remember_me_parameter"]) || array_key_exists("remember_me_parameter", $context) ? $context["remember_me_parameter"] : (function () { throw new RuntimeError('Variable "remember_me_parameter" does not exist.', 78, $this->source); })()), "_remember_me")) : ("_remember_me")), "html", null, true);
+            // line 86
+            echo twig_escape_filter($this->env, ((array_key_exists("remember_me_parameter", $context)) ? (_twig_default_filter((isset($context["remember_me_parameter"]) || array_key_exists("remember_me_parameter", $context) ? $context["remember_me_parameter"] : (function () { throw new RuntimeError('Variable "remember_me_parameter" does not exist.', 86, $this->source); })()), "_remember_me")) : ("_remember_me")), "html", null, true);
             echo "\" ";
-            echo ((((array_key_exists("remember_me_checked", $context)) ? (_twig_default_filter((isset($context["remember_me_checked"]) || array_key_exists("remember_me_checked", $context) ? $context["remember_me_checked"] : (function () { throw new RuntimeError('Variable "remember_me_checked" does not exist.', 78, $this->source); })()), false)) : (false))) ? ("checked") : (""));
+            echo ((((array_key_exists("remember_me_checked", $context)) ? (_twig_default_filter((isset($context["remember_me_checked"]) || array_key_exists("remember_me_checked", $context) ? $context["remember_me_checked"] : (function () { throw new RuntimeError('Variable "remember_me_checked" does not exist.', 86, $this->source); })()), false)) : (false))) ? ("checked") : (""));
             echo ">
                         <label class=\"form-check-label\" for=\"remember_me\">
                             ";
-            // line 80
-            echo twig_escape_filter($this->env, (isset($context["_remember_me_label"]) || array_key_exists("_remember_me_label", $context) ? $context["_remember_me_label"] : (function () { throw new RuntimeError('Variable "_remember_me_label" does not exist.', 80, $this->source); })()), "html", null, true);
+            // line 88
+            echo twig_escape_filter($this->env, (isset($context["_remember_me_label"]) || array_key_exists("_remember_me_label", $context) ? $context["_remember_me_label"] : (function () { throw new RuntimeError('Variable "_remember_me_label" does not exist.', 88, $this->source); })()), "html", null, true);
             echo "
                         </label>
                     </div>
                 ";
         }
-        // line 84
+        // line 92
         echo "
                 <div class=\"form-group\">
                     <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">";
-        // line 86
-        echo twig_escape_filter($this->env, (isset($context["_sign_in_label"]) || array_key_exists("_sign_in_label", $context) ? $context["_sign_in_label"] : (function () { throw new RuntimeError('Variable "_sign_in_label" does not exist.', 86, $this->source); })()), "html", null, true);
+        // line 94
+        echo twig_escape_filter($this->env, (isset($context["_sign_in_label"]) || array_key_exists("_sign_in_label", $context) ? $context["_sign_in_label"] : (function () { throw new RuntimeError('Variable "_sign_in_label" does not exist.', 94, $this->source); })()), "html", null, true);
         echo "</button>
                 </div>
             </form>
 
             <script src=\"";
-        // line 90
+        // line 98
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/easyadmin/login.js"), "html", null, true);
         echo "\"></script>
         </section>
@@ -275,7 +309,7 @@ class __TwigTemplate_8bc1a64e55b1db50cf9c2f94e0c25196 extends Template
 
     }
 
-    // line 24
+    // line 32
     public function block_header_logo($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -285,42 +319,42 @@ class __TwigTemplate_8bc1a64e55b1db50cf9c2f94e0c25196 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header_logo"));
 
-        // line 25
+        // line 33
         echo "                    ";
-        if ((isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 25, $this->source); })())) {
-            // line 26
+        if ((isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 33, $this->source); })())) {
+            // line 34
             echo "                        ";
             if (array_key_exists("ea", $context)) {
-                // line 27
+                // line 35
                 echo "                            <a class=\"logo ";
-                echo (((twig_length_filter($this->env, (isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 27, $this->source); })())) > 14)) ? ("logo-long") : (""));
+                echo (((twig_length_filter($this->env, (isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 35, $this->source); })())) > 14)) ? ("logo-long") : (""));
                 echo "\" title=\"";
-                echo twig_escape_filter($this->env, twig_striptags((isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 27, $this->source); })())), "html", null, true);
+                echo twig_escape_filter($this->env, twig_striptags((isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 35, $this->source); })())), "html", null, true);
                 echo "\" href=\"";
-                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 27, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 27));
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 35, $this->source); })()), "dashboardRouteName", [], "any", false, false, false, 35));
                 echo "\">
                                 ";
-                // line 28
-                echo (isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 28, $this->source); })());
+                // line 36
+                echo (isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 36, $this->source); })());
                 echo "
                             </a>
                         ";
             } else {
-                // line 31
+                // line 39
                 echo "                            <div class=\"logo ";
-                echo (((twig_length_filter($this->env, (isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 31, $this->source); })())) > 14)) ? ("logo-long") : (""));
+                echo (((twig_length_filter($this->env, (isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 39, $this->source); })())) > 14)) ? ("logo-long") : (""));
                 echo "\">
                                 ";
-                // line 32
-                echo (isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 32, $this->source); })());
+                // line 40
+                echo (isset($context["page_title"]) || array_key_exists("page_title", $context) ? $context["page_title"] : (function () { throw new RuntimeError('Variable "page_title" does not exist.', 40, $this->source); })());
                 echo "
                             </div>
                         ";
             }
-            // line 35
+            // line 43
             echo "                    ";
         }
-        // line 36
+        // line 44
         echo "                ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -342,7 +376,7 @@ class __TwigTemplate_8bc1a64e55b1db50cf9c2f94e0c25196 extends Template
 
     public function getDebugInfo()
     {
-        return array (  324 => 36,  321 => 35,  315 => 32,  310 => 31,  304 => 28,  295 => 27,  292 => 26,  289 => 25,  279 => 24,  265 => 90,  258 => 86,  254 => 84,  247 => 80,  240 => 78,  237 => 77,  235 => 76,  231 => 74,  223 => 71,  220 => 70,  218 => 69,  212 => 66,  207 => 64,  197 => 59,  192 => 57,  184 => 54,  181 => 53,  175 => 51,  173 => 50,  169 => 49,  166 => 48,  160 => 45,  156 => 43,  154 => 42,  147 => 37,  145 => 24,  139 => 20,  137 => 19,  134 => 18,  132 => 6,  130 => 17,  128 => 6,  126 => 16,  124 => 6,  122 => 15,  120 => 6,  118 => 14,  116 => 6,  114 => 13,  111 => 12,  101 => 11,  82 => 9,  63 => 8,  53 => 5,  51 => 6,  38 => 5,);
+        return array (  358 => 44,  355 => 43,  349 => 40,  344 => 39,  338 => 36,  329 => 35,  326 => 34,  323 => 33,  313 => 32,  299 => 98,  292 => 94,  288 => 92,  281 => 88,  274 => 86,  271 => 85,  269 => 84,  265 => 82,  257 => 79,  254 => 78,  252 => 77,  246 => 74,  241 => 72,  231 => 67,  226 => 65,  218 => 62,  215 => 61,  209 => 59,  207 => 58,  203 => 57,  200 => 56,  194 => 53,  190 => 51,  188 => 50,  181 => 45,  179 => 32,  173 => 28,  171 => 27,  168 => 26,  166 => 6,  164 => 25,  162 => 6,  160 => 24,  158 => 6,  156 => 23,  154 => 6,  152 => 22,  150 => 6,  148 => 21,  145 => 20,  135 => 19,  121 => 15,  115 => 13,  112 => 12,  102 => 11,  83 => 9,  64 => 8,  54 => 5,  52 => 6,  39 => 5,);
     }
 
     public function getSourceContext()
@@ -356,6 +390,14 @@ class __TwigTemplate_8bc1a64e55b1db50cf9c2f94e0c25196 extends Template
 
 {% block body_class 'page-login' %}
 {% block page_title %}{{ page_title is defined ? page_title|raw : (ea is defined ? ea.dashboardTitle|raw : '') }}{% endblock %}
+
+{% block head_favicon %}
+    {% if favicon_path|default(false) %}
+        <link rel=\"shortcut icon\" href=\"{{ favicon_path }}\">
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
 
 {% block wrapper_wrapper %}
     {% set page_title = block('page_title') %}

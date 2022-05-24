@@ -45,10 +45,10 @@ class ProductRepository extends ServiceEntityRepository
      */
     public function findWithSearch(Search $search)
     {
-        $query = $this
+        $query = $this  /*préparation de la requete */
             ->createQueryBuilder('p') /*création de la requete */
-            ->select('c','p')  /* jointure entre categorie et produit */
-            ->join('p.category','c');
+            ->select('c','p')  /* on établi les alias */
+            ->join('p.category','c');   /* jointure entre categorie et produit */
 
         if (!empty($search->categories)){
             $query = $query
@@ -58,7 +58,7 @@ class ProductRepository extends ServiceEntityRepository
 
         if (!empty($search->string)){
             $query = $query
-                ->andWhere('p.name LIKE :string')
+                ->andWhere('c.name LIKE :string')
                 ->setParameter('string',"%{$search->string}%");
                 // dd($search->string);
         }
