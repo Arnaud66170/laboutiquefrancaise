@@ -26,7 +26,7 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
+            'content' => [$this, 'block_content'],
         ];
     }
 
@@ -65,7 +65,7 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Hello CartController!";
+        echo "Mon panier - La boutique Française ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -75,39 +75,55 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
     }
 
     // line 5
-    public function block_body($context, array $blocks = [])
+    public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        echo "    <h1>Mon panier</h1>
+    Retrouvez ici l'ensemble des produits que vous avez ajouté à votre panier
+    <hr>
+    MON PANIER
+    ";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 10, $this->source); })()));
+        echo "
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/wamp64/www/laboutiquefrancaise/src/Controller/CartController.php", 0), "html", null, true);
-        echo "\">src/Controller/CartController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/wamp64/www/laboutiquefrancaise/templates/cart/index.html.twig", 0), "html", null, true);
-        echo "\">templates/cart/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <table class=\"table\">
+        <thead>
+            <tr>
+                <th scope=\"col\">Produit</th>
+                <th scope=\"col\">Quantité</th>
+                <th scope=\"col\">Prix</th>
+                <th scope=\"col\">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            ";
+        // line 22
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 22, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
+            // line 23
+            echo "            <tr>
+                <th scope=\"row\">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 30
+        echo "        </tbody>
+    </table>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -129,30 +145,42 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
 
     public function getDebugInfo()
     {
-        return array (  107 => 17,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  125 => 30,  113 => 23,  109 => 22,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello CartController!{% endblock %}
+{% block title %}Mon panier - La boutique Française {% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block content %}
+    <h1>Mon panier</h1>
+    Retrouvez ici l'ensemble des produits que vous avez ajouté à votre panier
+    <hr>
+    MON PANIER
+    {{dump(cart)}}
 
-<div class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ 'C:/wamp64/www/laboutiquefrancaise/src/Controller/CartController.php'|file_link(0) }}\">src/Controller/CartController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ 'C:/wamp64/www/laboutiquefrancaise/templates/cart/index.html.twig'|file_link(0) }}\">templates/cart/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <table class=\"table\">
+        <thead>
+            <tr>
+                <th scope=\"col\">Produit</th>
+                <th scope=\"col\">Quantité</th>
+                <th scope=\"col\">Prix</th>
+                <th scope=\"col\">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in cart %}
+            <tr>
+                <th scope=\"row\">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
 ", "cart/index.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\cart\\index.html.twig");
     }
