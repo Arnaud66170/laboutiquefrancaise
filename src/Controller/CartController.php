@@ -30,7 +30,7 @@ class CartController extends AbstractController
             ];
         }
 
-        dd($cartComplete);
+        // dd($cartComplete);
         return $this->render('cart/index.html.twig',[
             'cart'=>$cartComplete
         ]);

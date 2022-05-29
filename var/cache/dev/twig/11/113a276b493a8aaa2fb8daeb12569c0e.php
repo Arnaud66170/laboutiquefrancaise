@@ -89,15 +89,12 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
     Retrouvez ici l'ensemble des produits que vous avez ajouté à votre panier
     <hr>
     MON PANIER
-    ";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 10, $this->source); })()));
-        echo "
 
-    <table class=\"table\">
+    <table class=\"table mt-3\">
         <thead>
             <tr>
                 <th scope=\"col\">Produit</th>
+                <th scope=\"col\"></th>
                 <th scope=\"col\">Quantité</th>
                 <th scope=\"col\">Prix</th>
                 <th scope=\"col\">Total</th>
@@ -110,20 +107,51 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
         $context['_seq'] = twig_ensure_traversable((isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 22, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
             // line 23
-            echo "            <tr>
-                <th scope=\"row\">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
+            echo "                <tr>
+                    <th>
+                        <img src=\"/uploads/";
+            // line 25
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "product", [], "any", false, false, false, 25), "illustration", [], "any", false, false, false, 25), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "product", [], "any", false, false, false, 25), "name", [], "any", false, false, false, 25), "html", null, true);
+            echo "\" height=\"75px\" ><br/>                        
+                    </th>
+                    <td>
+                        ";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "product", [], "any", false, false, false, 28), "name", [], "any", false, false, false, 28), "html", null, true);
+            echo " <br/>
+                        <small> ";
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "product", [], "any", false, false, false, 29), "subtitle", [], "any", false, false, false, 29), "html", null, true);
+            echo " </small>
+                    </td>
+                    <td>x ";
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 31), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 32
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "product", [], "any", false, false, false, 32), "price", [], "any", false, false, false, 32) / 100), 2, ",", "."), "html", null, true);
+            echo " €</td>
+                    <td>";
+            // line 33
+            echo twig_escape_filter($this->env, twig_number_format_filter($this->env, ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "product", [], "any", false, false, false, 33), "price", [], "any", false, false, false, 33) * twig_get_attribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 33)) / 100), 2, ",", "."), "html", null, true);
+            echo " €</td>
+                </tr>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
+        // line 36
         echo "        </tbody>
     </table>
+    <div class=\"text-end\">
+        <b>Nombre de produits : </b>... <br/>
+        <b>Total de mon panier :</b>...<br/>
+        <a href=\"\" class=\"btn btn-success btn-block\">Valider mon panier</a>
+    </div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -145,7 +173,7 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
 
     public function getDebugInfo()
     {
-        return array (  125 => 30,  113 => 23,  109 => 22,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  148 => 36,  139 => 33,  135 => 32,  131 => 31,  126 => 29,  122 => 28,  114 => 25,  110 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -159,12 +187,12 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
     Retrouvez ici l'ensemble des produits que vous avez ajouté à votre panier
     <hr>
     MON PANIER
-    {{dump(cart)}}
 
-    <table class=\"table\">
+    <table class=\"table mt-3\">
         <thead>
             <tr>
                 <th scope=\"col\">Produit</th>
+                <th scope=\"col\"></th>
                 <th scope=\"col\">Quantité</th>
                 <th scope=\"col\">Prix</th>
                 <th scope=\"col\">Total</th>
@@ -172,15 +200,26 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
         </thead>
         <tbody>
             {% for product in cart %}
-            <tr>
-                <th scope=\"row\">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
+                <tr>
+                    <th>
+                        <img src=\"/uploads/{{product.product.illustration}}\" alt=\"{{product.product.name}}\" height=\"75px\" ><br/>                        
+                    </th>
+                    <td>
+                        {{product.product.name}} <br/>
+                        <small> {{product.product.subtitle}} </small>
+                    </td>
+                    <td>x {{product.quantity}}</td>
+                    <td>{{(product.product.price / 100) | number_format (2, ',', '.')}} €</td>
+                    <td>{{((product.product.price * product.quantity) / 100) | number_format (2, ',', '.')}} €</td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
+    <div class=\"text-end\">
+        <b>Nombre de produits : </b>... <br/>
+        <b>Total de mon panier :</b>...<br/>
+        <a href=\"\" class=\"btn btn-success btn-block\">Valider mon panier</a>
+    </div>
 {% endblock %}
 ", "cart/index.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\cart\\index.html.twig");
     }
