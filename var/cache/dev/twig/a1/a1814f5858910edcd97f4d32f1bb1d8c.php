@@ -481,6 +481,6 @@ class __TwigTemplate_1f9d3e4550f53cd9584ac13b98be6054 extends Template
     </main>
     </body>
 </html>
-", "base.html.twig", "C:\\laragon\\www\\laboutiquefrancaise\\templates\\base.html.twig");
+", "base.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\base.html.twig");
     }
 }

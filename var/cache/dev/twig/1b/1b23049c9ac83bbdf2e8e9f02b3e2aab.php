@@ -294,6 +294,6 @@ class __TwigTemplate_13ed5741921f8b1ba3afee99c4f863aa extends Template
 
 
 {% endblock %}
-", "home/index.html.twig", "C:\\laragon\\www\\laboutiquefrancaise\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\home\\index.html.twig");
     }
 }

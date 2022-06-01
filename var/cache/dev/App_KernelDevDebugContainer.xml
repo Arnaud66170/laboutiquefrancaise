@@ -3069,8 +3069,9 @@
         <argument>class_exists</argument>
       </call>
     </service>
-    <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\PsrCachedReader" public="true">
+    <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\PsrCachedReader">
       <tag name="annotations.cached_reader"/>
+      <tag name="container.do_not_inline"/>
       <argument type="service" id="annotations.reader"/>
       <argument type="service">
         <service class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
@@ -5569,6 +5570,7 @@
     <service id="security.authentication.success_handler" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler" abstract="true">
       <argument type="service" id="security.http_utils"/>
       <argument type="collection"/>
+      <argument type="service" id="monolog.logger" on-invalid="null"/>
     </service>
     <service id="security.authentication.custom_failure_handler" class="Symfony\Component\Security\Http\Authentication\CustomAuthenticationFailureHandler" abstract="true">
       <argument type="abstract">The custom failure handler service</argument>
@@ -7153,7 +7155,7 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.8I7PRJt" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.dKlLIdo" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountPasswordController::index" type="service_closure" id=".service_locator.9o_AN0R"/>
@@ -7222,6 +7224,7 @@
         <argument key="App\Controller\Admin\UserCrudController::renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\UserCrudController::updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\CartController::add" type="service_closure" id=".service_locator.wzqJDwK"/>
+        <argument key="App\Controller\CartController::delete" type="service_closure" id=".service_locator.wzqJDwK"/>
         <argument key="App\Controller\CartController::index" type="service_closure" id=".service_locator.wzqJDwK"/>
         <argument key="App\Controller\CartController::remove" type="service_closure" id=".service_locator.wzqJDwK"/>
         <argument key="App\Controller\HomeController::index" type="service_closure" id=".service_locator.BjMxIOf"/>
@@ -7299,6 +7302,7 @@
         <argument key="App\Controller\Admin\UserCrudController:renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\UserCrudController:updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\CartController:add" type="service_closure" id=".service_locator.wzqJDwK"/>
+        <argument key="App\Controller\CartController:delete" type="service_closure" id=".service_locator.wzqJDwK"/>
         <argument key="App\Controller\CartController:index" type="service_closure" id=".service_locator.wzqJDwK"/>
         <argument key="App\Controller\CartController:remove" type="service_closure" id=".service_locator.wzqJDwK"/>
         <argument key="App\Controller\HomeController:index" type="service_closure" id=".service_locator.BjMxIOf"/>
@@ -8045,12 +8049,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.8I7PRJt"/>
+      <argument type="service" id=".service_locator.dKlLIdo"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.8I7PRJt"/>
+      <argument type="service" id=".service_locator.dKlLIdo"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -9023,7 +9027,7 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.8I7PRJt"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.dKlLIdo"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9049,7 +9053,7 @@
     <service id=".service_locator.nTL_G5r" alias=".service_locator.esmk6IF"/>
     <service id=".service_locator.hNls88j" alias=".service_locator.ENGuM7_"/>
     <service id=".service_locator.6rNHno." alias=".service_locator.riFbGaB"/>
-    <service id=".service_locator.IF0hFWe" alias=".service_locator.8I7PRJt"/>
+    <service id=".service_locator.n.ea3T2" alias=".service_locator.dKlLIdo"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.xtGm.Kd" alias=".service_locator.4STrQIq"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>

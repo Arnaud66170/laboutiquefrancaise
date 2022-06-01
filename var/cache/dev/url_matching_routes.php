@@ -41,8 +41,11 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/cart/add/([^/]++)(*:187)'
-                .'|/produit/([^/]++)(*:212)'
+                .'|/cart/(?'
+                    .'|add/([^/]++)(*:190)'
+                    .'|delete/([^/]++)(*:213)'
+                .')'
+                .'|/produit/([^/]++)(*:239)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -53,8 +56,9 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        187 => [[['_route' => 'app_add_to_cart', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
-        212 => [
+        190 => [[['_route' => 'app_add_to_cart', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
+        213 => [[['_route' => 'app_delete_to_cart', '_controller' => 'App\\Controller\\CartController::delete'], ['id'], null, null, false, true, null]],
+        239 => [
             [['_route' => 'app_product', '_controller' => 'App\\Controller\\ProductController::show'], ['slug'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

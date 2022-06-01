@@ -2251,7 +2251,7 @@ array_key_exists("prototype", $context)) ? (twig_get_attribute($this->env, $this
         <div class=\"input-group\">
             ";
         // line 622
-        $context["placeholder"] = "";
+        $context["placeholder"] = $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->createTranslatable("action.choose_file", [], "EasyAdminBundle");
         // line 623
         echo "            ";
         $context["title"] = "";
@@ -3268,7 +3268,7 @@ array_key_exists("prototype", $context)) ? (twig_get_attribute($this->env, $this
 {% block ea_fileupload_widget %}
     <div class=\"ea-fileupload\">
         <div class=\"input-group\">
-            {% set placeholder = '' %}
+            {% set placeholder = t('action.choose_file', {}, 'EasyAdminBundle') %}
             {% set title = '' %}
             {% set filesLabel = 'files'|trans({}, 'EasyAdminBundle') %}
             {% if currentFiles %}
@@ -3414,6 +3414,6 @@ array_key_exists("prototype", $context)) ? (twig_get_attribute($this->env, $this
         </button>
     </div>
 {% endblock %}
-", "@EasyAdmin/crud/form_theme.html.twig", "C:\\laragon\\www\\laboutiquefrancaise\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\form_theme.html.twig");
+", "@EasyAdmin/crud/form_theme.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\form_theme.html.twig");
     }
 }

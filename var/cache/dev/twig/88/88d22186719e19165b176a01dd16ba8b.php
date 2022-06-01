@@ -46,7 +46,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@EasyAdmin/page/login_minimal.html.twig"));
 
         // line 3
-        $context["__internal_9e9046d73ffacdb4edfe7fb96e114589de69f61e447fe54645e67b1986ea1ebf"] = (($context["translation_domain"]) ?? ("messages"));
+        $context["__internal_23f290de0c7480acbea725b7c1b62cfab6ed2d67b72860381a040c4403483de3"] = (($context["translation_domain"]) ?? ("messages"));
         // line 4
         echo "<!DOCTYPE html>
 <html>
@@ -60,34 +60,34 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         ";
         // line 13
         $this->displayBlock('head_favicon', $context, $blocks);
-        // line 14
+        // line 16
         echo "
         <title>";
-        // line 15
+        // line 17
         echo twig_striptags(        $this->renderBlock("page_title", $context, $blocks));
         echo "</title>
 
         ";
-        // line 17
+        // line 19
         $this->displayBlock('head_stylesheets', $context, $blocks);
-        // line 20
+        // line 22
         echo "
         ";
-        // line 21
+        // line 23
         $this->displayBlock('head_javascript', $context, $blocks);
-        // line 24
+        // line 26
         echo "    </head>
 
     <body id=\"";
-        // line 26
+        // line 28
         $this->displayBlock('body_id', $context, $blocks);
         echo "\" class=\"ea ";
         $this->displayBlock('body_class', $context, $blocks);
         echo "\">
         ";
-        // line 27
+        // line 29
         $this->displayBlock('wrapper_wrapper', $context, $blocks);
-        // line 28
+        // line 30
         echo "    </body>
 </html>
 
@@ -110,6 +110,9 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_favicon"));
 
+        // line 14
+        echo "            <link rel=\"shortcut icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⬛</text></svg>\">
+        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -118,7 +121,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     }
 
-    // line 17
+    // line 19
     public function block_head_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -128,7 +131,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_stylesheets"));
 
-        // line 18
+        // line 20
         echo "            <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/easyadmin/app.css"), "html", null, true);
         echo "\">
@@ -141,7 +144,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     }
 
-    // line 21
+    // line 23
     public function block_head_javascript($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -151,7 +154,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "head_javascript"));
 
-        // line 22
+        // line 24
         echo "            <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/easyadmin/app.js"), "html", null, true);
         echo "\"></script>
@@ -164,7 +167,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     }
 
-    // line 26
+    // line 28
     public function block_body_id($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -199,7 +202,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     }
 
-    // line 27
+    // line 29
     public function block_wrapper_wrapper($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -229,7 +232,7 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  203 => 27,  168 => 26,  155 => 22,  145 => 21,  132 => 18,  122 => 17,  104 => 13,  91 => 28,  89 => 27,  83 => 26,  79 => 24,  77 => 21,  74 => 20,  72 => 17,  67 => 15,  64 => 14,  62 => 13,  51 => 4,  49 => 3,);
+        return array (  206 => 29,  171 => 28,  158 => 24,  148 => 23,  135 => 20,  125 => 19,  114 => 14,  104 => 13,  91 => 30,  89 => 29,  83 => 28,  79 => 26,  77 => 23,  74 => 22,  72 => 19,  67 => 17,  64 => 16,  62 => 13,  51 => 4,  49 => 3,);
     }
 
     public function getSourceContext()
@@ -246,7 +249,9 @@ class __TwigTemplate_b56e67a5f8ed8627c7ff45c58e9a26b0 extends Template
         <meta content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" name=\"viewport\">
         <meta name=\"generator\" content=\"EasyAdmin\" />
 
-        {% block head_favicon %}{% endblock %}
+        {% block head_favicon %}
+            <link rel=\"shortcut icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⬛</text></svg>\">
+        {% endblock %}
 
         <title>{{ block('page_title')|striptags|raw }}</title>
 

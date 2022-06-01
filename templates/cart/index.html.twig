@@ -16,11 +16,12 @@
                 <th scope="col">Quantité</th>
                 <th scope="col">Prix</th>
                 <th scope="col">Total</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             {% set total = null %}
-            {% set total_cart = null %}
+            {# {% set total_cart = 0 %} #}
             {# {{dump(cart)}} #}
             {% for product in cart %}
                 <tr>
@@ -34,9 +35,14 @@
                     <td>x {{product.quantity}}</td>
                     <td>{{(product.product.price / 100) | number_format (2, ',', '.')}} €</td>
                     <td>{{((product.product.price * product.quantity) / 100) | number_format (2, ',', '.')}} €</td>
+                    <td>
+                        {# <a href="" #}
+                        <img src="{{ asset ('img/delete.png') }}" height="15px" alt="supprimer">
+                    </td>
                 </tr>
-                    {% set total = total + (product.product.price * product.quantity) %}
-            {% set total_cart = total_cart + product.quantity %}
+
+                {% set total = total + (product.product.price * product.quantity) %}
+                {# {% set total_cart = total_cart + product.quantity %} #}
             {# {{dump(total_cart)}} #}
             
 
@@ -46,6 +52,6 @@
     <div class="text-end mb-5">
         <b>Nombre de produits : </b> {{ total|length }} <br/>
         <b>Total de mon panier :</b>{{(total / 100) | number_format (2, ',', '.')}} €<br/>
-        <a href="" class="btn btn-success btn-block">Valider mon panier</a>
+        <a href="" class="btn btn-success btn-block mt-3">Valider mon panier</a>
     </div>
 {% endblock %}
