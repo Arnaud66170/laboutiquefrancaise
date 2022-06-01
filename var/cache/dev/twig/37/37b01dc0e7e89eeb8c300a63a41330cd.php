@@ -99,6 +99,10 @@ class __TwigTemplate_754881df4863c466e206e9ac56ddb5c9 extends Template
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_account_password");
         echo "\">modifier mon mot de passe</a> <br/> 
     - Ajouter mes adresses<br/> 
+    - <a href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cart");
+        echo "\">mon panier</a> <br/> 
     - Mes commandes<br/> 
     <hr>
 ";
@@ -122,7 +126,7 @@ class __TwigTemplate_754881df4863c466e206e9ac56ddb5c9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  99 => 11,  96 => 10,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  104 => 13,  99 => 11,  96 => 10,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -139,6 +143,7 @@ class __TwigTemplate_754881df4863c466e206e9ac56ddb5c9 extends Template
     <hr>
     - <a href=\"{{ path('app_account_password')}}\">modifier mon mot de passe</a> <br/> 
     - Ajouter mes adresses<br/> 
+    - <a href=\"{{ path('app_cart')}}\">mon panier</a> <br/> 
     - Mes commandes<br/> 
     <hr>
 {% endblock %}
