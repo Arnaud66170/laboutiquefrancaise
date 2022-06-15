@@ -149,6 +149,6 @@ class __TwigTemplate_57facf84d09b9c03a797408bea651cbe extends Template
 
 
 
-", "account/password.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\templates\\account\\password.html.twig");
+", "account/password.html.twig", "C:\\laragon\\www\\laboutiquefrancaise\\templates\\account\\password.html.twig");
     }
 }

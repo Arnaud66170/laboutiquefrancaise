@@ -299,6 +299,6 @@ class __TwigTemplate_d2d0443f3cb60a75562908f4f33061eb extends Template
         {{- form_rest(form) -}}
     </table>
 {%- endblock form_widget_compound -%}
-", "form_table_layout.html.twig", "C:\\wamp64\\www\\laboutiquefrancaise\\vendor\\symfony\\twig-bridge\\Resources\\views\\Form\\form_table_layout.html.twig");
+", "form_table_layout.html.twig", "C:\\laragon\\www\\laboutiquefrancaise\\vendor\\symfony\\twig-bridge\\Resources\\views\\Form\\form_table_layout.html.twig");
     }
 }
