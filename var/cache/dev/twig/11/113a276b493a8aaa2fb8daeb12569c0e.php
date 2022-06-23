@@ -151,7 +151,7 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
             // line 40
             echo "                        <img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/delete.png"), "html", null, true);
-            echo "\" height=\"15px\" alt=\"supprimer\">
+            echo "\" height=\"18px\" alt=\"supprimer\">
                     </td>
                 </tr>
 
@@ -249,7 +249,7 @@ class __TwigTemplate_432dea7c664ca22a2773fa8acbcfbc64 extends Template
                     <td>{{((product.product.price * product.quantity) / 100) | number_format (2, ',', '.')}} €</td>
                     <td>
                         {# <a href=\"\" #}
-                        <img src=\"{{ asset ('img/delete.png') }}\" height=\"15px\" alt=\"supprimer\">
+                        <img src=\"{{ asset ('img/delete.png') }}\" height=\"18px\" alt=\"supprimer\">
                     </td>
                 </tr>
 

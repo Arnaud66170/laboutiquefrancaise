@@ -13,14 +13,13 @@ class CartController extends AbstractController
 {
     private $entityManager;
 
-    public function __construct(EntityManagerInterface $entityManager)
-    {
+    public function __construct(EntityManagerInterface $entityManager){
         $this->entityManager = $entityManager;
     }
 
+    // Index
     #[Route('/mon-panier', name: 'app_cart')]
-    public function index(Cart $cart): Response
-    {
+    public function index(Cart $cart): Response{
         $cartComplete = [];
         
         foreach ($cart -> get() as $id =>$quantity){
@@ -36,24 +35,24 @@ class CartController extends AbstractController
         ]);
     }
 
+    // fonction Add
     #[Route('/cart/add/{id}', name: 'app_add_to_cart')]
-    public function add(Cart $cart, $id): Response
-    {
+    public function add(Cart $cart, $id): Response{
         $cart->add($id);
         return $this->redirectToRoute('app_cart');
     }
 
+    // fonction Remove cart
     #[Route('/cart/remove', name: 'app_remove_my_cart')]
-    public function remove(Cart $cart): Response
-    {
+    public function remove(Cart $cart): Response{
         $cart->remove();
         return $this->redirectToRoute('app_products');
     }
 
+    // fonction delete cart
     #[Route('/cart/delete/{id}', name: 'app_delete_to_cart')]
-    public function delete(Cart $cart, $id): Response
-    {
+    public function delete(Cart $cart, $id): Response{
         $cart->delete($id);
-        return $this->redirectToRoute('app_products');
+        return $this->redirectToRoute('app_cart');
     }
 }
